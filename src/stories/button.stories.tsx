@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, PagerButton, RoundedButton, BasicButton } from '../components/button';
+import { Button, PagerButton, BasicButton, AppStoreButton, PlayStoreButton } from '../components/button';
 import { action } from '@storybook/addon-actions';
 import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
 
@@ -37,9 +37,25 @@ export const pagination = () => {
 	)
 }
 
-export const rounded = () => {
-	const label = text("Label", "Continue");
+export const appStore = () => {
+	const buttonTypes = {
+		Basic: "basic", 
+		Outlined: "outlined", 
+		Full: "full"
+	};
+	const defaultType = "basic";
+	const type = select("Type", buttonTypes, defaultType);
+	const href = text("Link", "#");
+
 	return (
-		<RoundedButton label={label} />
+		<AppStoreButton type={type} href={href} />
+	)
+}
+
+export const playStore = () => {
+	const href = text("Link", "#");
+
+	return (
+		<PlayStoreButton href={href} />
 	)
 }

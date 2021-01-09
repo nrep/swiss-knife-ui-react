@@ -10,8 +10,8 @@ addDecorator(withInfo({
     ...base,
     infoBody: {
       ...base.infoBody,
-      backgroundColor: '#303030',
-      color: 'white',
+      backgroundColor: 'white',
+      color: '#303030',
     },
     source: {
       h1: {
