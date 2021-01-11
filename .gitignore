@@ -24,3 +24,6 @@ yarn-error.log*
 
 
 storybook-static
+build-storybook.log
+package-lock.json
+package-lock.json
