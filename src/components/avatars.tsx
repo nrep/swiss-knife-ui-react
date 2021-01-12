@@ -9,8 +9,8 @@ interface AvatarProps extends ImageProps {
 }
 
 export const Avatar:React.FC<AvatarProps> = ({ src, alt, appearance }) => {
-    let height: string = (appearance == "medium") ? 'h-8' : (appearance == "large") ? 'h-10' : 'h-6';
-    let width: string = (appearance == "medium") ? 'w-8' : (appearance == "large") ? 'h-10' : 'w-6';
+    const height: string = (appearance == "medium") ? 'h-8' : (appearance == "large") ? 'h-10' : 'h-6';
+    const width: string = (appearance == "medium") ? 'w-8' : (appearance == "large") ? 'h-10' : 'w-6';
     return <img className={`inline-block ${height} ${width} rounded-full ring-2 ring-white`} src={src} alt={alt} />
 }
 interface AppearanceProps {
