@@ -1,6 +1,6 @@
 import React from "react";
 import { withKnobs } from "@storybook/addon-knobs";
-import { Alert } from '../components/alerts';
+import { Alert, InformationCard, CookieAlert, ConfirmationCard } from '../components/alerts';
 
 export default {
     title: "Alerts",
@@ -8,3 +8,6 @@ export default {
 };
 
 export const pink = () => <Alert />;
+export const cardOfInformation = () => <InformationCard />;
+export const cookie = () => <CookieAlert />;
+export const confirmation = () => <ConfirmationCard />;
